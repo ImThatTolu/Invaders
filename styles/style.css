@@ -1,0 +1,380 @@
+@font-face {
+    font-family: 'american_captain_patrius_02Rg';
+    src: url('../fonts/acp.eot');
+    src: url('../fonts/acp.eot?#iefix') format('embedded-opentype'),
+         url('../fonts/acp.woff2') format('woff2'),
+         url('../fonts/acp.woff') format('woff'),
+         url('../fonts/acp.ttf') format('truetype'),
+         url('../fonts/acp.svg#american_captain_patrius_02Rg') format('svg');
+    font-weight: normal;
+    font-style: normal;
+}
+
+* {
+	-o-box-sizing: border-box;
+	-moz-box-sizing: border-box;
+	-webkit-box-sizing: border-box;
+    box-sizing: border-box;
+}
+
+html, body {
+	margin: 0;
+	padding: 0;
+	height: 100%;
+	overflow: hidden;
+}
+body {
+	font-size: 20px;
+	font-family: 'american_captain_patrius_02Rg';	
+}
+h4 {
+	margin: 0;
+	padding: 0;
+}
+.wrapper {
+	width: 100%;
+	height: 100%;
+	margin: 0 auto;
+	position: relative;
+	color: #F05438;
+	
+}
+.game {
+	height: 100%;
+	background: url('../images/bg_even.png');
+	background-size: cover;
+	position: relative;
+}
+.panelTop {
+	
+	position: absolute;
+	top:0;
+	left: 0;	
+	z-index: 100;
+	padding-left: 5%;
+	padding-right: 5%;
+	pointer-events: none;
+	
+}
+	.panelTop h4 {
+		float: left;
+		margin-right: 10px;
+		padding-top: 20px;
+		
+	}
+
+	
+
+.warzone {
+	height: 100%;
+	overflow: hidden;
+	position: relative;
+}
+.panelBottom {
+	
+	padding-left: 5%;	
+	position: absolute;
+	bottom: 20px;
+	
+	padding-left: 5%;
+	padding-right: 5%;
+	right: 5px;
+	z-index: 100;
+
+}
+
+	.panelBottom .pause {
+	    display: block;
+		float: right;
+
+	}
+.bigBangTrigger {
+
+	float: right;
+}
+
+.bigBangTrigger img {
+	
+	display: block;
+	margin-left: auto;
+	margin-right: auto;
+	width: 80px;
+	opacity: 0.3;
+	pointer-events: none;
+	
+
+}
+
+.progress {
+  float: left;
+  clear: both;
+  height: 3px;
+  width: 100px;
+  margin-bottom: 0;
+  overflow: hidden;
+  background-color: #f5f5f5;
+  
+  -webkit-box-shadow: inset 0 1px 2px rgba(0,0,0,.1);
+  box-shadow: inset 0 1px 2px rgba(0,0,0,.1);
+}
+
+	.progress-bar {
+	  float: left;
+	  width: 0;
+	  height: 100%;
+	  font-size: 12px;
+	  line-height: 20px;
+	  color: #fff;
+	  text-align: center;
+	  background-color: #F05438;
+	  -webkit-box-shadow: inset 0 -1px 0 rgba(0,0,0,.15);
+	  box-shadow: inset 0 -1px 0 rgba(0,0,0,.15);
+	  -webkit-transition: width .6s ease;
+	  -o-transition: width .6s ease;
+	  transition: width .6s ease;
+	}
+
+	.sr-only {
+	  position: absolute;
+	  width: 1px;
+	  height: 1px;
+	  padding: 0;
+	  margin: -1px;
+	  overflow: hidden;
+	  clip: rect(0,0,0,0);
+	  border: 0;
+	}
+
+.invader {
+	display: block;
+	width: 90px;
+	height: 150px; 		
+	position: absolute;
+	left: 0;
+	background-repeat: no-repeat;
+	background-size: contain;
+	top:  -190px;
+	left: 10px;
+
+}
+	.quiz {
+		width: 120px;
+		
+		background: #fff;
+		position: fixed;
+		display: none;
+		
+		z-index: 999;
+	}
+
+	.question {
+		background-color: #000;
+		padding: 10px;
+		text-align: center;
+	}
+	.answers {
+		padding: 0;
+		margin: 0;
+	}
+		.answers li {
+			list-style: none;	
+			display: block;
+			border: 1px solid #000;
+			padding: 10px;
+			cursor: pointer;
+		}
+
+		.answers li:hover , .answers li:active  {
+
+			background-color: #F05438;
+			color: #fff;
+
+		}
+
+		.answers p {
+
+			text-align: center;
+			margin: 0;
+			padding: 0;
+
+		}
+		.answers div {
+		    border: 1px solid #F05438;
+			width: 100%;
+
+		}
+	.invader.template {
+		display: none;
+	}
+
+	.kill {
+		width: 90px;
+		height: 150px;
+		background: url('../images/kill.png');
+		background-size: cover;
+		display: none;
+	}
+
+	.aim {
+		width: 90px;
+		height: 150px;
+		background: url('../images/aim.png');
+		background-size: cover;
+		display: none;
+	}
+
+.overlay {
+	position: absolute;
+	left: 0;
+	top: 0;
+	bottom: 0;
+	right: 0;
+	background: url('../images/bg_morn.png');
+	background-size: cover;
+	color: #fff;
+	text-align: center;
+	z-index: 1000;
+}
+	.overlay center {
+	color: #F05438;	
+	font-size: 2.5em;
+	}
+	.overlayBg {
+		display: block;
+		margin-left: auto;
+		margin-right: auto;
+		margin-top: 8%;
+		width: 280px;
+	}
+	.button {
+		display: inline-block;
+		border: 1px solid #F05438;
+		border-radius: 10px;
+		border-width: 3px;
+		width: 90%;
+		font-size: 20px;
+		padding: 0.08em 1em;
+		margin-top: 20px;
+		background-color: #F05438;
+		cursor: pointer;
+	}
+		.button:active , .button:hover{
+			background-color: #F05438;
+		}
+
+.restart {
+	position: absolute;
+	left: 0;
+	top:0;
+	bottom: 0;
+	right: 0;
+	color: #fff;
+	text-align: center;
+	z-index: 1001;
+	display: none;
+	background: url('../images/bg_night.png');
+	background-size: cover;
+	background-position: center center;
+}
+	.restart .button {
+		width: 30%;
+		clear: both;
+		padding: 0.7em 0.08em;
+		background-color: #F05438;	
+	}
+	.restart .button img {
+		width: 40%;
+		display: block;
+		margin: 0 auto;
+		border-radius: 3px;
+	}
+	.restart center {
+		font-size: 2.5em;
+	}
+
+	.restart .restartBg {
+		display: block;
+		margin-left: auto;
+		margin-right: auto;
+		margin-top: 8%;
+		width: 280px;
+    } 
+.gameCenter {
+
+	margin-top: 5%;
+
+}
+.gameCenter .nscore , .hscore {
+
+	float: left;
+	width: 50%;
+	font-size: 20px;
+}
+
+.record {
+
+	background: url('../images/new-icon.png');
+	background-repeat: no-repeat;
+	background-position: right bottom;
+
+
+}
+
+.highScore {
+	margin: 0 auto;
+}
+
+#sampInvader {
+	display: block;
+	width: 90px;
+	height: 150px; 
+	background-image: url('../images/invader_r.png');		
+	background-repeat: no-repeat;
+	background-size: contain;
+	margin: 0 auto;
+	margin-top: 20px; 
+}
+
+#touchit {
+	display: block;
+	width: 90px;
+	height: 150px; 
+	background-image: url('../images/tutorial.png');		
+	background-repeat: no-repeat;
+	background-size: contain;
+}
+
+@-webkit-keyframes invader {
+    from { top: -150px; }
+    to { top: 2000px; }
+}
+
+@-moz-keyframes invader {
+    from { top: -150px; }
+    to { top: 2000px; }
+}
+
+@keyframes invader {
+    from { top: -150px; }
+    to { top: 2000px; }
+} 
+
+.invader {
+	-webkit-animation-timing-function: linear;
+	-webkit-animation-name: invader;
+	-webkit-animation-duration: 28s;
+	animation-timing-function: linear;
+	animation-name: invader;
+	animation-duration: 28s;
+}
+
+.invader.level1 { -webkit-animation-duration: 40s; animation-duration: 40s; }
+.invader.level2 { -webkit-animation-duration: 35s; animation-duration: 37s; }
+.invader.level3 { -webkit-animation-duration: 30s; animation-duration: 34s; }
+.invader.level4 { -webkit-animation-duration: 25s; animation-duration: 31s; }
+.invader.level5 { -webkit-animation-duration: 20s; animation-duration: 28s; }
+
+.invader.stopped {
+	-webkit-animation-play-state: paused;
+	animation-play-state: paused;	
+}
